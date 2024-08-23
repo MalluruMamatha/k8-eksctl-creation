@@ -3,7 +3,7 @@ kind: ClusterConfig
 
 metadata:
   name: expense         # Name of your EKS cluster
-  region: us-west-1           # AWS region where the cluster will be created
+  region: us-east-1           # AWS region where the cluster will be created
 managedNodeGroups:
 - name: expense
   instanceType: m5.large
