@@ -53,7 +53,7 @@ fi
 curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.30.0/2024-05-12/bin/linux/amd64/kubectl
 export PATH=$PATH:/usr/local/bin
 sudo mv kubectl /usr/local/bin/kubectl
-sudo chmod +x /usr/local/bin/eksctl
+sudo chmod +x /usr/local/bin/kubectl
 kubectl version --client
 if [ $? -ne 0 ]; then
   echo "Error: kubectl installation failed"
