@@ -60,3 +60,19 @@ if [ $? -ne 0 ]; then
 else
   echo "kubectl installation succeeded"
 fi
+
+# kubens
+git clone https://github.com/ahmetb/kubectx /opt/kubectx
+ln -s /opt/kubectx/kubens /usr/local/bin/kubens
+VALIDATE $? "kubens installation"
+
+## k9s install
+
+curl -sS https://webinstall.dev/k9s | bash
+
+## helm
+
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
+VALIDATE $? "helm installation"
